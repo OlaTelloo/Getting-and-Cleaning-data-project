@@ -1,4 +1,16 @@
-X_test.txt is the data set for the test values
-X_train.txt is the data set for the train values
- 
- 
+
+run_analysis.R performs the following steps:
+  
+1.Download the datasets.
+
+2.Assign each data to variables incuding features, activities, X_train,X_train,Sub_train,X_test,Y_test,Sub_test, using read.table function
+
+3.Merges the training and the test sets to one data set X_df is created by merging X_train and X_test using rbind() function Y_df is created by merging Y_train and Y_test using rbind() function Subject is created by merging Subject_train and Subject_test using rbind() function Merged_Data is created by merging Subject, Y and X using cbind() function
+
+4.Extracts only the measurements of the mean and standard deviation for each measurement and selecting only columns: subject, code and the measurements on the mean and standard deviation (std) for each measurement
+
+5.Uses descriptive activity names to name the activities in the data set Entire numbers in code column of the TidyData replaced with corresponding activity taken from second column of the activities variable
+
+6.Appropriately labels the data set with descriptive variable names column using case_when function.
+
+7.Creates a tidy data set (Output) with the average of each variable for each activity and each subject.
